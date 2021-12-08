@@ -247,9 +247,9 @@ static bool _renderBand(const Request& request, const Band* band, bool mono)
 
                 switch (plane->endian()) {
                     case BandPlane::Dependant:
-                        *(uint32_t*)(&header + size) = (uint32_t)plane->
+                        *(uint32_t*)(&header[size]) = (uint32_t)plane->
                             dataSize();
-                        *(uint32_t*)(&header + size + 4) = (uint32_t)state;
+                        *(uint32_t*)(&header[size+4]) = (uint32_t)state;
                         break;
                     case BandPlane::BigEndian:
                         // Data size 24 - 31

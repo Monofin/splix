@@ -252,7 +252,8 @@ static bool _compressBandedJBIGPage(const Request& request, Page* page)
             }
         }
         // Are the CMY planes completely empty in the band?
-        for (unsigned int i=0; i < page->colorsNr() - 1; i++)
+
+        for (int i=0; i < page->colorsNr() - 1; i++)
             if (!_isEmptyBand(band[i], bandSize)) { 
                 cmyPlanesHasData = true;
                 break;

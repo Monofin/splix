@@ -195,12 +195,12 @@ int main(int argc, char **argv)
             "[file]\n"), argv[0]);
         return 1;
     }
-    jobid = argv[1];
-    user = argv[2];
-    title = argv[3];
+    /* jobid = argv[1]; Not used */
+    /* user = argv[2]; Not used */
+    /* title = argv[3]; Not used */
     options = argv[5];
     file = argc == 7 ? argv[6] : NULL;
-    copies = strtol(argv[4], (char **)NULL, 10);
+    /* copies = strtol(argv[4], (char **)NULL, 10); Not used */
     ppdFile = getenv("PPD");
 
     // Get more information on the SpliX environment (for debugging)
