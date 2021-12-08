@@ -180,9 +180,10 @@ static char *_readCMSFile(PPDFile& ppd, const char *manufacturer, bool csa)
  */
 int main(int argc, char **argv)
 {
-    const char *jobid, *user, *title, *options, *ppdFile, *file;
+    /* const char *jobid, *user, *title; Not Used */
+    const char *options, *ppdFile, *file;
     const char *paperType, *manufacturer;
-    unsigned long copies;
+    /* unsigned long copies; Not Used */
     bool pageSetup=false;
     char buffer[1024];
     char *crd, *csa;
